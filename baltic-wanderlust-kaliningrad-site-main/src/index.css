@@ -1,0 +1,119 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 214 90% 48%; /* #1565C0 - Deep Baltic Blue */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 36 100% 50%; /* #FFA000 - Amber */
+    --secondary-foreground: 0 0% 12%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+
+    --radius: 4px;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Roboto', sans-serif;
+    @apply antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-medium;
+    letter-spacing: -0.0125em;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+}
+
+@layer components {
+  .material-card {
+    @apply bg-white rounded shadow-elevation-2 transition-shadow duration-200 hover:shadow-elevation-4;
+  }
+
+  .material-button {
+    @apply py-2 px-4 rounded font-medium transition-all duration-200 uppercase tracking-wide;
+  }
+
+  .material-button-primary {
+    @apply bg-primary-700 text-white hover:bg-primary-800 active:bg-primary-900;
+  }
+
+  .material-button-secondary {
+    @apply bg-secondary-600 text-black hover:bg-secondary-700 active:bg-secondary-800;
+  }
+
+  .material-input {
+    @apply border-0 border-b-2 border-gray-300 focus:ring-0 focus:border-primary-600 bg-transparent px-0 py-2;
+  }
+
+  .page-section {
+    @apply py-12 px-4 md:px-8 max-w-7xl mx-auto;
+  }
+  
+  /* Language transition animation */
+  .language-transition {
+    @apply transition-opacity duration-300;
+  }
+  
+  .language-fade-enter {
+    @apply opacity-0;
+  }
+  
+  .language-fade-enter-active {
+    @apply opacity-100;
+  }
+  
+  .language-fade-exit {
+    @apply opacity-100;
+  }
+  
+  .language-fade-exit-active {
+    @apply opacity-0;
+  }
+}
+
