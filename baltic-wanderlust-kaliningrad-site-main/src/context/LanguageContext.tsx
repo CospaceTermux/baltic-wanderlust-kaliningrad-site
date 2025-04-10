@@ -2,10 +2,12 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 
 type Language = 'ru' | 'en';
 
+type TranslationKey = keyof typeof translations.ru;
+
 interface LanguageContextType {
   language: Language;
   setLanguage: (language: Language) => void;
-  t: (key: string) => string;
+  t: (key: TranslationKey) => string;
 }
 
 // Default to Russian
@@ -23,20 +25,27 @@ export const translations = {
     
     // Common UI Elements
     'common.learnMore': 'Узнать больше',
+    'common.imageUnavailable': 'Изображение недоступно',
     
     // Home Page
-    'home.title': 'Калининград',
-    'home.subtitle': 'Уникальный город на Балтике',
+    'home.title': 'Добро пожаловать в Калининград',
+    'home.subtitle': 'Откройте для себя уникальный город, где встречаются история и современность, где каждая улица хранит свои тайны, а янтарное побережье манит своей красотой',
     'home.explore': 'Исследовать',
     'home.about': 'О городе',
     'home.about.text': 'Калининград — самый западный город России, расположенный на побережье Балтийского моря. Бывший Кёнигсберг сочетает в себе богатую историю, уникальную архитектуру и морское очарование.',
-    'home.attractions': 'Достопримечательности',
+    'home.attractions': 'Главные достопримечательности',
+    'home.attractions.gates': 'Королевские ворота',
+    'home.attractions.gates.description': 'Одни из семи сохранившихся городских ворот Калининграда, построенные в неоготическом стиле в середине 19-го века',
     'home.attractions.cathedral': 'Кафедральный собор',
     'home.attractions.cathedral.description': 'Исторический кафедральный собор 14-го века на острове Канта',
     'home.attractions.amber': 'Музей янтаря',
     'home.attractions.amber.description': 'Музей с экспозицией изделий из балтийского янтаря и уникальной коллекцией',
-    'home.attractions.gates': 'Королевские ворота',
-    'home.attractions.gates.description': 'Одни из семи сохранившихся городских ворот Калининграда, построенные в неоготическом стиле в середине 19-го века',
+    'home.attractions.fishingVillage': 'Рыбная деревня',
+    'home.attractions.fishingVillage.description': 'Современный этнографический и торгово-ремесленный центр, стилизованный под архитектуру довоенного Кёнигсберга',
+    'home.attractions.curonian': 'Куршская коса',
+    'home.attractions.curonian.description': 'Уникальный природный заповедник, включенный в список Всемирного наследия ЮНЕСКО',
+    'home.attractions.friedland': 'Фридландские ворота',
+    'home.attractions.friedland.description': 'Одни из семи сохранившихся городских ворот Калининграда, построенные в середине XIX века',
     'home.find.stay': 'Найдите идеальное место для проживания',
     'home.find.stay.description': 'От роскошных отелей на берегу моря до уютных квартир в центре города - Калининград предлагает варианты размещения для любого путешественника и бюджета.',
     'home.find.stay.option1': 'Курорты на побережье Балтийского моря',
@@ -60,6 +69,7 @@ export const translations = {
     'news.title': 'Последние новости',
     'news.subtitle': 'Будьте в курсе последних событий в Калининграде',
     'news.loadMore': 'Загрузить больше новостей',
+    'news.noResults': 'Новости не найдены',
     'news.flight': 'Объявлены новые международные авиарейсы в Калининград',
     'news.flight.date': '5 апреля 2025',
     'news.flight.summary': 'С следующего месяца авиакомпании добавят прямые рейсы из Берлина, Варшавы и Стокгольма в Калининград, что облегчит европейским туристам визит в российский анклав.',
@@ -186,20 +196,27 @@ export const translations = {
     
     // Common UI Elements
     'common.learnMore': 'Learn More',
+    'common.imageUnavailable': 'Image Unavailable',
     
     // Home Page
-    'home.title': 'Kaliningrad',
-    'home.subtitle': 'A unique city on the Baltic Sea',
+    'home.title': 'Welcome to Kaliningrad',
+    'home.subtitle': 'Discover a unique city where history meets modernity, where every street holds its secrets, and the amber coast beckons with its beauty',
     'home.explore': 'Explore',
     'home.about': 'About the City',
     'home.about.text': "Kaliningrad is Russia's westernmost city, located on the Baltic Sea coast. The former Königsberg combines rich history, unique architecture and maritime charm.",
-    'home.attractions': 'Attractions',
-    'home.attractions.cathedral': 'Cathedral',
-    'home.attractions.cathedral.description': 'Historic 14th-century cathedral on Kant Island',
-    'home.attractions.amber': 'Amber Museum',
-    'home.attractions.amber.description': 'Museum displaying Baltic amber artifacts',
+    'home.attractions': 'Main Attractions',
     'home.attractions.gates': "King's Gate",
-    'home.attractions.gates.description': "One of the seven surviving city gates of Kaliningrad, the King's Gate was built in the mid-19th century in a neo-Gothic style",
+    'home.attractions.gates.description': "One of Kaliningrad's seven surviving city gates, built in Neo-Gothic style in the mid-19th century",
+    'home.attractions.cathedral': 'Cathedral',
+    'home.attractions.cathedral.description': '14th-century historic cathedral on Kant Island',
+    'home.attractions.amber': 'Amber Museum',
+    'home.attractions.amber.description': 'Museum featuring Baltic amber artifacts and a unique collection',
+    'home.attractions.fishingVillage': 'Fishing Village',
+    'home.attractions.fishingVillage.description': 'Modern ethnographic and trade center styled after pre-war Königsberg architecture',
+    'home.attractions.curonian': 'Curonian Spit',
+    'home.attractions.curonian.description': 'Unique nature reserve included in the UNESCO World Heritage List',
+    'home.attractions.friedland': 'Friedland Gate',
+    'home.attractions.friedland.description': "One of Kaliningrad's seven surviving city gates, built in the mid-19th century",
     'home.find.stay': 'Find Your Perfect Stay',
     'home.find.stay.description': 'From luxurious waterfront hotels to cozy downtown apartments, Kaliningrad offers accommodation options for every traveler and budget.',
     'home.find.stay.option1': 'Beachfront resorts along the Baltic coast',
@@ -223,6 +240,7 @@ export const translations = {
     'news.title': 'Latest News',
     'news.subtitle': 'Stay updated with the latest happenings in Kaliningrad',
     'news.loadMore': 'Load More News',
+    'news.noResults': 'No news found',
     'news.flight': 'New International Flight Routes to Kaliningrad Announced',
     'news.flight.date': 'April 5, 2025',
     'news.flight.summary': 'Starting next month, airlines will be adding direct flights from Berlin, Warsaw, and Stockholm to Kaliningrad, making it easier for European tourists to visit the Russian enclave.',
@@ -343,7 +361,6 @@ export const translations = {
 };
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  // Get saved language from localStorage or use default
   const [language, setLanguage] = useState<Language>(() => {
     const savedLanguage = localStorage.getItem('language') as Language;
     return savedLanguage && (savedLanguage === 'ru' || savedLanguage === 'en') 
@@ -351,15 +368,12 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       : defaultLanguage;
   });
 
-  // Save language to localStorage when it changes
   useEffect(() => {
     localStorage.setItem('language', language);
-    // Update html lang attribute for accessibility and SEO
     document.documentElement.lang = language;
   }, [language]);
 
-  // Translation function
-  const t = (key: string): string => {
+  const t = (key: TranslationKey): string => {
     return translations[language][key] || key;
   };
 

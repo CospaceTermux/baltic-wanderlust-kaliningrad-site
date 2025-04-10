@@ -1,0 +1,11 @@
+Изображения для сайта:
+
+1. royal-gates.jpg - https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Königstor_Kaliningrad.jpg/1280px-Königstor_Kaliningrad.jpg
+2. cathedral.jpg - https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Königsberg_Cathedral_2021.jpg/1280px-Königsberg_Cathedral_2021.jpg
+3. amber-museum.jpg - https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Башня_Дона_в_Калининграде.jpg/1280px-Башня_Дона_в_Калининграде.jpg
+4. fishing-village.jpg - https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Рыбная_деревня_в_Калининграде.jpg/1280px-Рыбная_деревня_в_Калининграде.jpg
+5. kurshskaya-kosa.jpg - https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Curonian_Spit_NP_02.jpg/1280px-Curonian_Spit_NP_02.jpg
+6. friedland-gates.jpg - https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Friedland_Gate_in_Kaliningrad.jpg/1280px-Friedland_Gate_in_Kaliningrad.jpg
+7. kaliningrad-hero.jpg - https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Кафедральный_собор_в_Калининграде.jpg/1280px-Кафедральный_собор_в_Калининграде.jpg
+
+Все изображения взяты из Wikimedia Commons и доступны под свободной лицензией. 

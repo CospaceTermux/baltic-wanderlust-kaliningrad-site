@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface HeroProps {
@@ -22,13 +21,13 @@ const Hero: React.FC<HeroProps> = ({
 
   return (
     <div 
-      className={`relative ${heightClass} flex items-center justify-center bg-cover bg-center`}
+      className={`relative ${heightClass} flex items-center justify-center bg-cover bg-center bg-gray-900`}
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-      <div className="relative z-10 text-center text-white px-4">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">{title}</h1>
-        {subtitle && <p className="text-xl md:text-2xl max-w-3xl mx-auto">{subtitle}</p>}
+      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+      <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">{title}</h1>
+        {subtitle && <p className="text-xl md:text-2xl leading-relaxed">{subtitle}</p>}
       </div>
     </div>
   );

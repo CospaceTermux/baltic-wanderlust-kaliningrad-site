@@ -1,73 +1,106 @@
-# Welcome to your Lovable project
+# Baltic Wanderlust - Калининградский туристический портал
 
-## Project info
+Интерактивный веб-сайт для туристов, планирующих посетить Калининград. Проект разработан с использованием современных веб-технологий и предоставляет удобный интерфейс для изучения достопримечательностей, поиска отелей и навигации по городу.
 
-**URL**: https://lovable.dev/projects/1b994780-9368-43c4-9ffe-19987f078323
+## Основные функции
 
-## How can I edit this code?
+### Главная страница
+- Приветственный баннер с красивым видом города
+- Секция с основными достопримечательностями
+- Быстрый доступ к поиску отелей и карте города
+- Адаптивный дизайн для всех устройств
 
-There are several ways of editing your application.
+### Карта города
+- Интерактивная карта на базе Leaflet
+- Маркеры различных типов (достопримечательности, музеи, рестораны и др.)
+- Всплывающие окна с информацией о местах
+- Возможность скачать карту (в разработке)
 
-**Use Lovable**
+### Отели
+- Каталог отелей с фильтрацией
+- Детальная информация о каждом отеле
+- Фотогалерея и описание удобств
+- Система рейтингов и отзывов (в разработке)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/1b994780-9368-43c4-9ffe-19987f078323) and start prompting.
+### Новости
+- Актуальные новости города
+- Анонсы мероприятий
+- Туристические новости
+- Фильтрация по категориям
 
-Changes made via Lovable will be committed automatically to this repo.
+### Админ-панель
+- Управление контентом сайта
+- Добавление/редактирование новостей
+- Управление списком отелей
+- Модерация отзывов (в разработке)
 
-**Use your preferred IDE**
+## Технологии
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Фронтенд
+- **React 19** - основной фреймворк
+- **TypeScript** - типизация кода
+- **Vite** - сборка проекта
+- **React Router DOM** - маршрутизация
+- **Tailwind CSS** - стилизация
+- **Framer Motion** - анимации
+- **Leaflet** - интерактивные карты
+- **Lucide React** - иконки
+- **Sonner** - уведомления
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### UI компоненты
+- **Radix UI** - доступные компоненты
+  - @radix-ui/react-dropdown-menu
+  - @radix-ui/react-navigation-menu
+  - @radix-ui/react-dialog
+  - @radix-ui/react-tooltip
+  - и другие
 
-Follow these steps:
+### Утилиты
+- **@tailwindcss/forms** - стилизация форм
+- **@tailwindcss/typography** - типографика
+- **@tailwindcss/aspect-ratio** - работа с пропорциями
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Мультиязычность
+- Поддержка русского и английского языков
+- Легко расширяемая система переводов
+- Сохранение выбранного языка
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Запуск проекта
 
-# Step 3: Install the necessary dependencies.
-npm i
+```bash
+# Установка зависимостей
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Запуск в режиме разработки
 npm run dev
+
+# Сборка проекта
+npm run build
+
+# Запуск собранной версии
+npm run start
 ```
 
-**Edit a file directly in GitHub**
+## Адаптивность
+- Мобильные устройства (< 768px)
+- Планшеты (768px - 1024px)
+- Десктопы (> 1024px)
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Дизайн
+- Современный Material Design
+- Кастомные цвета и темы
+- Анимации и переходы
+- Оптимизированная типографика
 
-**Use GitHub Codespaces**
+## Состояние проекта
+- Базовая структура и навигация - готово
+- Интерактивная карта - готово
+- Каталог отелей - готово
+- Мультиязычность - готово
+- Адаптивный дизайн - готово
+- Система отзывов - в разработке
+- Расширенная админ-панель - в разработке
+- Интеграция с API отелей - планируется
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/1b994780-9368-43c4-9ffe-19987f078323) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes it is!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## Лицензия
+MIT

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Star } from 'lucide-react';
 
@@ -50,7 +49,7 @@ const HotelCard: React.FC<HotelCardProps> = ({
           
           <div className="flex justify-between items-center mt-4">
             <div>
-              <span className="text-2xl font-bold">${price}</span>
+              <span className="text-2xl font-bold">{price} ₽</span>
               <span className="text-gray-500 ml-1">/ night</span>
             </div>
             

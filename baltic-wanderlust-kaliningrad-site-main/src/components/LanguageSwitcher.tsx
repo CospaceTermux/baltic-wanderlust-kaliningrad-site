@@ -1,13 +1,12 @@
-
 import React from 'react';
 import { Globe } from 'lucide-react';
-import { useLanguage } from '@/context/LanguageContext';
+import { useLanguage } from '../context/LanguageContext';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+} from './ui/dropdown-menu';
 
 const LanguageSwitcher: React.FC<{ isScrolled?: boolean }> = ({ isScrolled = false }) => {
   const { language, setLanguage, t } = useLanguage();

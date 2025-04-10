@@ -1,8 +1,7 @@
-
 import React from 'react';
-import { Toaster } from "@/components/ui/sonner";
+import { Toaster } from "../components/ui/sonner";
 import Navigation from './Navigation';
-import { useLanguage } from '@/context/LanguageContext';
+import { useLanguage } from '../context/LanguageContext';
 
 interface LayoutProps {
   children: React.ReactNode;
